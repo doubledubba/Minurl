@@ -12,7 +12,7 @@ class Url(models.Model):
         return self.name()
     
     def get_absolute_url(self):
-        return DOMAIN + self.short
+        return 'http://' + DOMAIN + '/' + self.short
 
     def name(self):
         if len(self.long) > maxUrlDisplay:
